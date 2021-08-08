@@ -372,7 +372,6 @@ p {
 .contact-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* margin: 30px 0; */
   margin-bottom: 30px;
 }
 
@@ -534,6 +533,19 @@ label span {
 @media screen and (max-width: 430px) {
   #showcase .showcase-container {
     height: 65vh;
+  }
+
+  .form-container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container input,
+  .form-container label {
+    grid-column: 1;
+  }
+
+  .form-container label[for="email"] {
+    grid-row: 3;
   }
 }
 
