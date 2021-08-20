@@ -31,6 +31,10 @@
   margin-right: 10px;
 }
 
+.social i:hover {
+  color: var(--primaryColor);
+}
+
 /* Navigation Links */
 
 #main-nav ul {
@@ -151,6 +155,65 @@
 
 #main-footer .footer-container input[type="submit"] {
   width: 90%;
+}
+
+/* Join Modal */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 2;
+}
+
+.join-modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  padding: 0 20px 20px 20px;
+  border: var(--secondaryColor) 3px solid;
+  z-index: 3;
+  animation: zoom 0.5s ease-in-out;
+}
+
+.join-modal input[type="email"] {
+  width: 70%;
+  padding: 10px;
+  margin: 10px 0;
+  display: block;
+}
+
+.close-modal {
+  font-size: 40px;
+  align-self: flex-end;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-modal:hover {
+  color: #bbb;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes zoom {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 /* Pages */
@@ -274,6 +337,10 @@ label span {
     grid-column: 1;
     grid-template-columns: 1fr;
   }
+
+  .join-modal {
+    width: 75%;
+  }
 }
 
 @media screen and (max-width: 670px) {
@@ -349,6 +416,10 @@ label span {
   .page-container article h1 {
     font-size: 24px;
   }
+
+  .join-modal {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 430px) {
@@ -373,5 +444,9 @@ label span {
 @media screen and (max-width: 350px) {
   #showcase .showcase-container {
     height: 90vh;
+  }
+
+  .join-modal {
+    width: 95%;
   }
 }
