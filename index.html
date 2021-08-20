@@ -189,13 +189,8 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse,
             voluptatum.
           </p>
-          <form action="">
-            <input
-              type="email"
-              placeholder="Enter Your Email..."
-              name="email"
-              required
-            />
+          <form>
+            <input type="email" placeholder="Enter Your Email..." required />
             <input
               type="submit"
               value="Subsribe"
@@ -220,11 +215,41 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
             veniam?
           </p>
-          <a href="#" class="button button-secondary">Join Now</a>
+          <a class="button button-secondary open-modal">Join Now</a>
         </div>
 
         <div><p>Copyright 2021 &copy; Daily Planet</p></div>
       </div>
     </footer>
+
+    <div class="join-modal bg-primary hidden">
+      <span class="close-modal">&times;</span>
+      <h1>Join Our Club</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+        voluptate ad iste quod quia laudantium exercitationem autem voluptas
+        eligendi soluta corrupti enim ea ipsa et, quaerat porro aspernatur dicta
+        voluptatum!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quo
+        deleniti libero porro accusamus omnis. Animi quidem, voluptatibus culpa
+        dolores ex magnam totam nihil ipsam?
+      </p>
+
+      <form>
+        <input
+          type="email"
+          placeholder="Enter Your Email..."
+          class="modal-email"
+          required
+        />
+
+        <button class="button button-secondary modal-submit">Submit</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="src/joinModal.js"></script>
   </body>
 </html>
